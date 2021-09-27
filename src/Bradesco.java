@@ -53,7 +53,7 @@ public class Bradesco{
             chooseMenu();
         }
         else{
-            System.out.println("Volte sempre (◠‿・)—☆");
+            System.out.println("Obrigada. Volte sempre (◠‿・)—☆");
         }
     }
 
