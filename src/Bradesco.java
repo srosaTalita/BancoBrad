@@ -26,7 +26,7 @@ public class Bradesco{
     }
 
     static void chooseMenu(){
-        char option;
+        char optionVS;
         int op = numberOption("Digite uma opção do menu: ");
 
         while (op < 1 || op > 4) {
@@ -44,17 +44,23 @@ public class Bradesco{
                 break;
         }
         
-        do{
-            option = charOption("Voltar ao menu ou sair (v/s): ");
-        }while (option != 'v' && option != 's');
+        
+        optionVS = charOption("Voltar ao menu ou sair (v/s): ");
+        menuValidation(optionVS);
+    }
 
-        if(option == 'v'){
+    static void menuValidation(char vs){
+        while (vs != 'v' && vs != 's'){
+            vs = charOption("Voltar ao menu ou sair (v/s): ");
+        }
+        if(vs == 'v'){
             printMenu();
             chooseMenu();
         }
         else{
             System.out.println("Obrigada. Volte sempre (◠‿・)—☆");
         }
+
     }
 
     static void pCredit(){
